@@ -1,0 +1,58 @@
+.title{
+  background-color: green;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 1%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  padding: 2%;
+  border-style: dashed;
+}
+
+.left{
+  width: 45%;
+  margin: 2.5% 2.5%;
+  display: inline-block;
+}
+
+.menuitems{
+  width: 15%;
+  text-align: center;
+  border-color: black;
+  border-style: dashed;
+  margin: 2%;
+  display: inline-block;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  font-family:monospace;
+  font-weight: bold;
+}
+
+.clockwise{
+    transform: rotate(10deg)
+}
+
+.anticlockwise{
+    transform: rotate(-10deg)
+}
+
+.right{
+  width: 45%;
+  margin: 2.5% 2.5%;
+  display: inline-block;
+}
+
+.bottom{
+  width: 100%;
+  display: inline-block;
+}
+
+.body{
+  width: 100%;
+}
