@@ -1,8 +1,31 @@
 .title{
-  background-color: green;
+  /*background-color: green;*/
   width: 100%;
   display: inline-block;
   padding-bottom: 1%;
+}
+
+.logo{
+  background-image: url("img/Kidz-Klub-logo.png");
+  width: 100%;
+  height: 20%;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pic{
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.pictext{
+  width: 100%;
+  margin: 5%;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 
 .row {
@@ -34,6 +57,10 @@
   font-weight: bold;
 }
 
+.menuitems:hover {
+    background-color: green;
+}
+
 .clockwise{
     transform: rotate(10deg)
 }
@@ -46,6 +73,7 @@
   width: 45%;
   margin: 2.5% 2.5%;
   display: inline-block;
+  display: grid;
 }
 
 .bottom{
