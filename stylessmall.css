@@ -21,7 +21,7 @@ a{
 }
 
 .pic{
-  width: 100%;
+  width: 50%;
   grid-column-start: 1;
   grid-column-end: 1;
 }
@@ -33,20 +33,10 @@ a{
   grid-column-end: 2;
 }
 
-.row {
-  display: flex;
-}
-
-.col {
-  flex: 1;
-  padding: 2%;
-  border-style: dashed;
-}
-
 .left{
-  width: 45%;
-  margin: 2.5% 2.5%;
-  display: inline-block;
+  width: 80%;
+  margin: 10% 10%;
+  display: block;
 }
 
 h2{
@@ -85,10 +75,9 @@ p{
 }
 
 .right{
-  width: 45%;
-  margin: 2.5% 2.5%;
-  display: inline-block;
-  display: grid;
+  width: 80%;
+  margin: 10% 10%;
+  display: block;
 }
 
 .bottom{
