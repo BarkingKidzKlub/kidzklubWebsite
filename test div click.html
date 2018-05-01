@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<title> Test DIV on click </title>
+</head>
+
+<body>
+<header><h1>Header</h1></header>
+
+<div class="wrapper" id="target">
+
+
+
+</div>
+
+
+
+
+<footer><h2>foot</h2></footer>
+</body>
+
+<script>
+  let myElement = document.getElementById("target");
+  //console.log(myElement);
+
+  let divs = [];
+
+  //let test1 = ;
+  //let test2 = new createDIV;
+  let textInput = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+  let name = ["jo", "tim", "mary", "dan", "han", "linda", "michelle", "dianne", "william", "quinn"];
+
+  for (let i = 0; i < textInput.length; i++){
+    divs[i] = new createDIV(i, textInput[i]);
+    myElement.innerHTML += divs[i].text;
+  }
+
+  console.log(document);
+
+
+function createDIV(i, text) {
+  this.id = i;
+  this.text = text;
+  this.text = "<div id = " + this.id + "> " + this.text + " </div>";
+}
+for (let i = 0; i < textInput.length; i++){
+
+  document.getElementById(i).addEventListener("click", function(){
+    //document.getElementById(i).innerHTML = "My name is " + name[i];}
+    console.log(name[i]);}
+  )
+  }
+
+</script>
+
+
+<style>
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2em;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper >div{
+  background: #D8023F;
+  padding: 1em;
+  color: #fff;
+  border-radius: 30% 1%;
+}
+
+.wrapper >div:nth-child(odd){
+  background: #A11E2E;
+  color: #fff;
+  border-radius: 1% 30%;
+}
+
+h1, h2 {
+  color: blue;
+  text-align: center;
+}
+
+</style>
+
+</html>
