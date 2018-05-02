@@ -7,13 +7,13 @@
 <body>
 <header><h1>Header</h1></header>
 
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <div class="wrapper" id="target">
 
 
 
 </div>
-
-
 
 
 <footer><h2>foot</h2></footer>
@@ -24,32 +24,43 @@
   //console.log(myElement);
 
   let divs = [];
-
-  //let test1 = ;
-  //let test2 = new createDIV;
-  let textInput = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   let name = ["jo", "tim", "mary", "dan", "han", "linda", "michelle", "dianne", "william", "quinn"];
+  let col = ["red", "blue", "yellow", "red", "blue", "yellow", "blue", "yellow", "red", "red"];
 
-  for (let i = 0; i < textInput.length; i++){
-    divs[i] = new createDIV(i, textInput[i]);
+  for (let i = 0; i < name.length; i++){
+    divs[i] = new createDIV(i, name[i], col[i]);
     myElement.innerHTML += divs[i].text;
   }
 
-  console.log(document);
-
-
-function createDIV(i, text) {
-  this.id = i;
-  this.text = text;
-  this.text = "<div id = " + this.id + "> " + this.text + " </div>";
+function createDIV(i, name, col) {
+  this.id = name;
+  this.colour = col;
+  this.text = name;
+  this.text = "<div class = 'result " + this.colour + "' id =" + this.id + ">" + this.text + "</div>";
+  console.log("my id is " + this.id);
 }
-for (let i = 0; i < textInput.length; i++){
+for (let i = 0; i < name.length; i++){
 
-  document.getElementById(i).addEventListener("click", function(){
+  document.getElementById(name[i]).addEventListener("click", function(){
     //document.getElementById(i).innerHTML = "My name is " + name[i];}
     console.log(name[i]);}
   )
+}
+
+function myFunction() {
+let input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+let boxes = document.getElementsByClassName("result");
+for (let j = 0; j < boxes.length;j++){
+  //console.log(boxes[j].innerHTML.toUpperCase().indexOf(filter));
+  if (boxes[j].innerHTML.toUpperCase().indexOf(filter) > -1){
+      boxes[j].hidden = false;
+  } else {
+      boxes[j].hidden = true;
   }
+
+}
+}
 
 </script>
 
@@ -63,22 +74,50 @@ for (let i = 0; i < textInput.length; i++){
   grid-auto-rows: minmax(100px, auto);
 }
 
-.wrapper >div{
-  background: #D8023F;
-  padding: 1em;
+.red {
+  background: #FF0000;
+}
+
+.yellow {
+  background: #DEDE00;
+  color: #000;
+}
+
+.blue {
+  background: #0000FF;
   color: #fff;
+}
+
+div {
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+}
+
+.wrapper >div{
+  padding: 1em;
   border-radius: 30% 1%;
 }
 
 .wrapper >div:nth-child(odd){
-  background: #A11E2E;
-  color: #fff;
   border-radius: 1% 30%;
 }
 
 h1, h2 {
   color: blue;
   text-align: center;
+}
+
+.result{
+  font-size: 20pt;
+}
+
+#myInput{
+  padding: 1%;
+  margin: 2em;
+  width: 50%;
+  align-self: center;
+  font-size: 20pt;
 }
 
 </style>
